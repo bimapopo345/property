@@ -1,175 +1,97 @@
 # Real Estate Website
+The Real Estate Website is a comprehensive platform designed to simplify the process of finding and managing properties. It provides a user-friendly interface for property seekers and owners to connect, browse listings, and manage their properties efficiently.
 
-## Testing and Logging Guide
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### Running Tests
+## About
+The Real Estate Website is built using React, Node.js, and MongoDB. It offers a range of features, including property listing, user authentication, and appointment scheduling.
 
-#### Frontend Tests
+### Key Features
+- User authentication and authorization
+- Property listing and management
+- Appointment scheduling
+- User profiles and messaging
 
-The frontend uses Vitest and React Testing Library for component testing.
+## Features
+### User Authentication
+The website includes a user authentication system, allowing users to register, login, and manage their accounts. This feature is implemented using JSON Web Tokens (JWT) for secure authentication.
 
+### Property Listing
+The platform provides a comprehensive property listing feature, enabling users to browse and search for properties based on various criteria such as location, price, and property type.
+
+### Appointment Scheduling
+Users can schedule appointments to view properties, and property owners can manage their appointments and communicate with potential buyers or renters.
+
+### User Profiles
+Users can create and manage their profiles, including uploading profile pictures and biographies.
+
+## Technology Stack
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+
+### Frontend
+- React
+- React Router
+- Axios
+- Tailwind CSS
+
+## Prerequisites
+- Node.js (>= 14.17.0)
+- MongoDB (>= 3.6.0)
+- npm (>= 6.14.13)
+
+## Installation
 ```bash
-# Install dependencies
+# Clone the repository
+git clone https://github.com/bimapopo345/property.git
+
+# Navigate to the frontend directory
 cd frontend
-npm install
 
-# Run tests
-npm test
-
-# Run tests with UI
-npm run test:ui
-
-# Run tests with coverage report
-npm run coverage
-```
-
-Available test scripts:
-
-- `npm test`: Run tests in watch mode
-- `npm run test:ui`: Run tests with Vitest UI
-- `npm run coverage`: Generate test coverage report
-
-#### Backend Tests
-
-The backend uses Jest for testing the API endpoints and controllers.
-
-```bash
 # Install dependencies
-cd backend
 npm install
 
-# Run tests
-npm test
+# Navigate to the backend directory
+cd backend
 
-# Run tests in watch mode
-npm run test:watch
+# Install dependencies
+npm install
 
-# Run tests with coverage report
-npm run test:coverage
+# Start the development server
+npm run dev
 ```
 
-### Logging System
+## Usage
+1. Start the development server by running `npm run dev` in the backend directory.
+2. Open a web browser and navigate to `http://localhost:5173`.
+3. Register or login to an existing account to start using the platform.
 
-The application uses Winston for logging on the backend. Logs are stored in the `logs` directory:
+## API Documentation
+The API documentation is available at `http://localhost:4000/api/docs`.
 
-- `logs/error.log`: Contains all error-level logs
-- `logs/combined.log`: Contains all logs (info, warn, error)
+## Deployment
+The platform can be deployed to a production environment using a cloud provider such as Vercel or Render.
 
-#### Log Types
+## Contributing
+Contributions are welcome. Please submit a pull request with your changes and a brief description of the changes made.
 
-1. **Request Logging**
+## License
+The Real Estate Website is licensed under the MIT License.
 
-   - Every HTTP request is automatically logged with:
-     - Method
-     - Path
-     - Status code
-     - Response time
-     - IP address
-     - User agent
-
-2. **API Operation Logging**
-
-   - Property operations (CRUD)
-   - Database connections
-   - File uploads
-   - Error conditions
-
-3. **Error Logging**
-   - API errors
-   - Database errors
-   - Unhandled rejections
-   - Uncaught exceptions
-
-#### Viewing Logs
-
-During development, logs are also output to the console. In production, you can view the log files in the `logs` directory:
-
-```bash
-# View the last 100 lines of the error log
-tail -n 100 logs/error.log
-
-# Follow the combined log in real-time
-tail -f logs/combined.log
-```
-
-### Test Coverage
-
-After running the coverage commands, you can find the coverage reports at:
-
-- Frontend: `frontend/coverage/index.html`
-- Backend: `backend/coverage/lcov-report/index.html`
-
-Open these files in a browser to view detailed coverage information.
-
-### Writing New Tests
-
-#### Frontend Components
-
-Place component tests in `__tests__` directories next to the components:
-
-```
-src/components/
-  └── MyComponent/
-      ├── MyComponent.jsx
-      └── __tests__/
-          └── MyComponent.test.jsx
-```
-
-#### Backend Controllers
-
-Place controller tests in the `controller/__tests__` directory:
-
-```
-backend/
-  └── controller/
-      ├── myController.js
-      └── __tests__/
-          └── myController.test.js
-```
-
-### Testing Best Practices
-
-1. **Component Testing**
-
-   - Test component rendering
-   - Test user interactions
-   - Test error states
-   - Mock external dependencies
-
-2. **API Testing**
-
-   - Test successful operations
-   - Test error cases
-   - Test input validation
-   - Mock database calls
-
-3. **Integration Testing**
-   - Test component integration
-   - Test API endpoint integration
-   - Test database operations
-
-### Debugging
-
-1. **Frontend Tests**
-
-   - Use `test:ui` for interactive debugging
-   - Use `console.log` in tests
-   - Check test coverage reports
-
-2. **Backend Tests**
-   - Use `test:watch` for development
-   - Check error logs
-   - Use debugger statements
-
-### Common Issues
-
-1. **Test Failed to Run**
-
-   - Check if all dependencies are installed
-   - Ensure test files follow naming convention
-   - Check for syntax errors
-
-2. **Logging Issues**
-   - Ensure logs directory exists and is writable
-   - Check disk space
-   - Verify log rotation settings
+## Contact
+For any questions or issues, please contact the developer at [bimapopo345@gmail.com](mailto:bimapopo345@gmail.com).
